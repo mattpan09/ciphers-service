@@ -28,3 +28,9 @@ jobs:
       run: |
         cd ciphers_project
         python3 manage.py test
+      
+    - name: Build and push the image
+      run: |
+        docker login --username mattpan09 --password ${{secrets.ACCESS_TOKEN}} ghcr.io
+        docker build -t ghcr.io/mattpan09/ciphers-service:latest --file Dockeerfile .
+        docker push ghcr.io/mattpan09/ciphers-service:latest
