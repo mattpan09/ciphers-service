@@ -127,6 +127,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-"https://mattpan09.github.io/",
+"https://mattpan09.github.io",
 "http://localhost:3000"
 ]
